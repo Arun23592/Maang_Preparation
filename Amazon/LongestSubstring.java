@@ -29,3 +29,7 @@ public class LongestSubstring {
       System.out.println("Longest subtring: "+result);
     }
 }
+
+
+//1. Implemented Slding Window algorithm and two pointers technique
+//2. Initialize maximumLength and 
