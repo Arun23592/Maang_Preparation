@@ -1,4 +1,4 @@
-public package Maang_Preparation.Amazon;
+package Maang_Preparation.Amazon;
 
 import java.util.Arrays;
 
@@ -11,13 +11,13 @@ class MoveAllZerosEnd {
 
       while (end >= 0) {
         if (n[end] == 0) {
-            end++;
+            end--;
         }else{
-          int temp = n[start];
-          n[start] = n[end];
-          n[end] = temp;
+          int temp = n[end];
+          n[end] = n[start];
+          n[start] = temp;
           end--;
-          start++;
+          start--;
         }
         
       
@@ -28,7 +28,7 @@ class MoveAllZerosEnd {
   }
 
   public static void main(String[] args) {
-    int[] n = [1, 0, 2, 0, 3, 0, 4];
+    int[] n = {1, 0, 2, 0, 3, 0, 4};
     MoveAllZerosEnd zeros = new MoveAllZerosEnd();
     zeros.moveZeros(n);
     System.out.println(Arrays.toString(n));
