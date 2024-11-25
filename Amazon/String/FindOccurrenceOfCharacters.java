@@ -29,12 +29,20 @@ public class FindOccurrenceOfCharacters {
 
 
   public static void main(String[] args) {
-    String str = "Try Programming";
-
+    String str = "abcaddddbcd";
+    //Print 
     Map<Character, Integer> charEntry = occurenceCharacter(str);
 
     for(Map.Entry<Character, Integer> entry : charEntry.entrySet()){
-      System.out.println(entry.getKey() + " --> " + entry.getValue());
+      System.out.println("(" + entry.getKey() + " , " + entry.getValue() +  ")");
     }
   }
 }
+
+
+
+/*
+ * 
+ *  Time
+ * 
+ */
