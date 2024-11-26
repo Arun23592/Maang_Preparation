@@ -45,5 +45,21 @@ public class MergeSortedArray {
  * 3. Repeat step 2 until we have processed all elements in nums2.
  * 4. At this point, the remaining elements in nums1 are already in the correct order
  * 5. Return the merged array
- *  
+ * 
+ * Edge cases:
+ * 1. Single Element in Each Array
+ * 2. Large k Value.
+ * 3. Negative value
+ * 
+ * Interview Questions:
+ * 1. Can you describe how the in-place merge is achieved?
+ * Answer: The in-place merge is achieved by using the three pointers approach. We use the k pointer to keep
+ *  track of the current position in the result array, and the i and j pointers to keep track of
+ *  the current positions in nums1 and nums2 respectively. This way, we can merge the two
+ * sorted arrays into the result array in place without using any extra space.
+ * <By starting from the end of nums1 and filling it backwards, 
+ * we ensure that we don't overwrite elements in nums1 that we still need to compare.>
+ * 
+ * 
+ * 
  */
