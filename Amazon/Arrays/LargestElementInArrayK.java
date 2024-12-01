@@ -28,7 +28,7 @@ public class LargestElementInArrayK {
 
     public static void main(String[] args){
       int[] nums = {3,2,3,1,2,4,5,5,6};
-      int k = 6;
+      int k = 4;
       LargestElementInArrayK obj = new LargestElementInArrayK();
       int sElement = obj.largestElement(nums, k);
       System.out.println("Second largest element is: "+sElement);

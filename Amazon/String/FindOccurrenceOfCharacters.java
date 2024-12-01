@@ -29,7 +29,7 @@ public class FindOccurrenceOfCharacters {
 
 
   public static void main(String[] args) {
-    String str = "abcaddddbcd";
+    String str = "abcabc";
     //Print 
     Map<Character, Integer> charEntry = occurenceCharacter(str);
 
@@ -42,7 +42,8 @@ public class FindOccurrenceOfCharacters {
 
 
 /*
- * 
- *  Time
+ * APproach:  HashMap
+ *  Time complexity: o(n)
+ * space complexity: O(m) + O(n) => O(n+m)
  * 
  */
