@@ -58,7 +58,7 @@ public class NQueen {
   
 
 
-  //construct board
+  //2.construct board
   private List<String> constructBoard(char[][] board){
     List<String> result = new ArrayList<>();
 
@@ -102,7 +102,7 @@ public class NQueen {
  *  (i.e., no queen is attacking the new queen), we recursively try to place the remaining queens
  *  in the subsequent rows.
  * 3. Bactrcking function: 
- * 4. Safet check: 
+ * 4. Safety check: 
  * Check the column above the current position.
  * Check the upper left diagonal.
  * Check the upper right diagonal.
