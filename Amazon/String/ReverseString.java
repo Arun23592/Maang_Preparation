@@ -18,7 +18,7 @@ public class ReverseString {
 
 
   public static void main(String[] args) {
-    String s = "Hannah";
+    String s = "H,a,n,n,a,h";
     char[] chars = s.toCharArray();
     ReverseString rev = new ReverseString();
 
