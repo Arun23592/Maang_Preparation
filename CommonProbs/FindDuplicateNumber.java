@@ -52,6 +52,20 @@ For each midpoint mid of the current range [left, right], we count how many numb
  * Time Complexity: O(n log n), where n is the length of the array. The binary search runs in O(log n) and for each iteration, we count elements in O(n).
 Space Complexity: O(1), as we only use a constant amount of extra space regardless of the input size.
  * 
- * 
+ * Explanation
+Initialization:
+
+We initialize two pointers, left to 1 and right to nums.length - 1 (since the values are in the range [1, n]).
+Binary Search:
+
+We perform a binary search on the range of numbers (not the array indices).
+For each midpoint mid of the current range [left, right], we count how many numbers in the array are less than or equal to mid.
+Count Comparison:
+
+If the count of numbers less than or equal to mid is greater than mid, it implies that the duplicate number must be in the range [left, mid]. Therefore, we update right to mid - 1.
+Otherwise, the duplicate number must be in the range [mid + 1, right]. Therefore, we update left to mid + 1.
+Finding the Duplicate:
+
+The duplicate number will be found when left is equal to right. The variable duplicate keeps track of the midpoint that caused the count to be greater than mid, which is the duplicate number.
  * 
  */
