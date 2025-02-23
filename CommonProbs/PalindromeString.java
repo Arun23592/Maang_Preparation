@@ -1,11 +1,13 @@
 public class PalindromeString {
 
   public static boolean panlindromes(String s){
+    String str = s.toLowerCase();
+    String st = str.replaceAll("[a-zA-Z0-9]", "");
     int left = 0;
-    int right = s.length()-1;
+    int right = st.length()-1;
 
     while (left < right) {
-      if (s.charAt(left) == s.charAt(right)) {
+      if (st.charAt(left) == st.charAt(right)) {
           left++;
           right--;
         
