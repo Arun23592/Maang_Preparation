@@ -5,6 +5,7 @@ import java.util.HashSet;
 public class FindDuplicatesArray {
 
   public static void duplicateArrays(int[] arr){
+  
     HashSet<Integer> seen = new HashSet<>();
     HashSet<Integer> duplicates = new HashSet<>();
 
