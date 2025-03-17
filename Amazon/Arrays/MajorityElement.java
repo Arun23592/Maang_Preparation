@@ -36,3 +36,13 @@ public class MajorityElement {
     }
 
 }
+
+
+// Approach: HashMap
+// Intuition:
+// We can use a HashMap to store the frequency of each element. Traverse the array, and increment the counter for each element encountered. The element with a frequency greater than n/2 will be the majority element.
+
+// Time Complexity:
+// O(n) because we iterate over the array once.
+// Space Complexity:
+// O(n) because we might store all elements in the map in the worst case.
