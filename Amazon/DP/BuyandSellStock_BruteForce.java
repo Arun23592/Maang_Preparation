@@ -26,6 +26,8 @@ public class BuyandSellStock_BruteForce {
 
 
 
+
+
   public static void main(String[] args) {
     int[] prices = {100,180,260,310,40,535,695};
     int[] result = buyandsellStock(prices);
@@ -70,6 +72,8 @@ public class BuyandSellStock_BruteForce {
  * 1. How would you improve the efficiency of this brute force algorithm?
  * Answer: Use a one-pass algorithm that keeps track of the minimum price seen so far and the maximum profit seen
  * 2. How does the brute force approach help in understanding the problem before optimizing it?
+ * 
+ * 
  * Answer: 
  * 
  * 
