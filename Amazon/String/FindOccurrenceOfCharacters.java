@@ -29,7 +29,7 @@ public class FindOccurrenceOfCharacters {
 
 
   public static void main(String[] args) {
-    String str = "abcabc";
+    String str = "Automation";
     //Print 
     Map<Character, Integer> charEntry = occurenceCharacter(str);
 
