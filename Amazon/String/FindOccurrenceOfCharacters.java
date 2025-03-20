@@ -12,13 +12,14 @@ public class FindOccurrenceOfCharacters {
     char[] chars = str.toCharArray();
 
     for(char ch: chars){
+      char key = Character.toLowerCase(ch);
       if (ch == ' ') {
           continue;
       }
-      if(mapCount.containsKey(ch)){
-          mapCount.put(ch, mapCount.get(ch) + 1);
+      if(mapCount.containsKey(key)){
+          mapCount.put(key, mapCount.get(key) + 1);
       }else{
-        mapCount.put(ch, 1);
+        mapCount.put(key, 1);
       }
     }
     return mapCount;
@@ -29,12 +30,12 @@ public class FindOccurrenceOfCharacters {
 
 
   public static void main(String[] args) {
-    String str = "Automation";
+    String str = "AUTOMATION";
     //Print 
     Map<Character, Integer> charEntry = occurenceCharacter(str);
 
     for(Map.Entry<Character, Integer> entry : charEntry.entrySet()){
-      System.out.println("(" + entry.getKey() + " , " + entry.getValue() +  ")");
+      System.out.println("(" + entry.getKey() + " : " + entry.getValue() +  ")");
     }
   }
 }
@@ -42,7 +43,7 @@ public class FindOccurrenceOfCharacters {
 
 
 /*
- * APproach:  HashMap
+ * Approach:  HashMap
  *  Time complexity: o(n)
  * space complexity: O(m) + O(n) => O(n+m)
  * 
