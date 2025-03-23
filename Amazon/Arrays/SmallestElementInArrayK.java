@@ -29,7 +29,7 @@ public class SmallestElementInArrayK {
     }
 
     public static void main(String[] args){
-      int[] nums = {3,2,3,1,2,4,5,5};
+      int[] nums = {3,2,3,1,2,4,5,5,6};
       int k = 2;
       LargestElementInArrayK obj = new LargestElementInArrayK();
       int sElement = obj.largestElement(nums, k);
