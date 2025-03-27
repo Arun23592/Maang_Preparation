@@ -10,18 +10,20 @@ class MoveAllZerosEnd {
 
      for(int i = 0; i<n.length; i++){
       if(n[i] != 0){
-       n[position] = n[i];
-       position++;
+        int temp = n[i];
+        n[i] = n[position];
+        n[position] = temp;
+        position++;
       }
      }
-        
-     // Fill the remaining positions with zeros
-     while (position < n.length) {
-      n[position] = 0;
-      position++;
-     }
+    }      
+    //  // Fill the remaining positions with zeros
+    //  while (position < n.length) {
+    //   n[position] = 0;
+    //   position++;
+    //  }
       
-    }
+    // }
 
     
 
