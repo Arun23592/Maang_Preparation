@@ -10,7 +10,7 @@ public class FindOccurrenceOfCharacters {
     Map<Character,  Integer> mapCount = new HashMap<>();
 
     char[] chars = str.toCharArray();
-
+    
     for(char ch: chars){
       char key = Character.toLowerCase(ch);
       if (ch == ' ') {
