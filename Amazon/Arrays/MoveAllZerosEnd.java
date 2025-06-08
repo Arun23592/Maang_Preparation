@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.Arrays;
+package Maang_Preparation.MorganStanley;
 
 import java.util.Arrays;
 
