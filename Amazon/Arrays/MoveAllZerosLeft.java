@@ -23,7 +23,7 @@ class MoveAllZerosLeft {
       
     }
 
-    
+    Arrays.sort(n, start+1, n.length);
 
   }
 
