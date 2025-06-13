@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class findSumPairIndexes {
 
-    public static int pairSumFinder(int arr, int targetSum){
+    public static void pairSumFinder(int[] arr, int targetSum){
         if (arr == null || arr.length < 2) {
             System.out.println("Array is so small or null to find pairs");
             return;
@@ -19,8 +19,11 @@ public class findSumPairIndexes {
 
 
             if(numMap.containsKey(complement)){
-                System.out.println("Found pair: (Indexes " + numMap.get(complement) + " and " + i + ") because " + complement + " + " + currentNum + " = " + targetSum);
+                int complementIndex = numMap.get(complement);
+                System.out.println("Found pair: (Indexes " + complementIndex + " and " + i + ")");
             }
+
+            numMap.put(currentNum, i);
         }
     }
 
