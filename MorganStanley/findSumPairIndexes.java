@@ -29,8 +29,8 @@ public class findSumPairIndexes {
 
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int targetSum = 10;
+        int[] arr = {1, 3};
+        int targetSum = 4;
 
         pairSumFinder(arr, targetSum);
         System.out.println("--------");
