@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.BitManipulation;
+package Amazon.BitManipulation;
 
 public class SingleNumber {
 
