@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.String;
+package Amazon.String;
 
 public class ReverseString2 {
 
