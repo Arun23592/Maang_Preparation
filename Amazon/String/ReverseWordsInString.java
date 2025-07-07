@@ -1,11 +1,11 @@
-package Maang_Preparation.Amazon.String;
+package Amazon.String;
 
 public class ReverseWordsInString {
 
   public String reverseWords(String str){
     String[] s = str.trim().split("\\s+");
     String rev = "";
-    for(int i = s.length-1; i>=0; i--){
+    for(int i = s.length-1; i>=0; --i){
         rev += s[i] + " ";
     }
 
