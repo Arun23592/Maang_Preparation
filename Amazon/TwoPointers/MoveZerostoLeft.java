@@ -1,27 +1,31 @@
 package Amazon.TwoPointers;
 
+import java.util.Arrays;
+
 public class MoveZerostoLeft {
 
-  public static void moveZerosLeft(int[] nums){
-    int left = 0;
-    int right = nums.length -1 ;
+  public void moveZerosLeft(int[] nums){
+    int start = nums.length -1;
+    int end = nums.length -1 ;
 
-    while (left < right) {
-      if (nums[left] == 0) {
-          left--;
+    while (end >= 0) {
+      if (nums[end] == 0) {
+          end--;
       }else{
-        int temp = nums[left];
-        nums[left] = nums[right];
-        nums[right] = temp;
-        left--;
-        right++;
+        int temp = nums[end];
+        nums[end] = nums[start];
+        nums[start] = temp;
+        end--;
+        start--;
        }
     }
   }
 
   public static void main(String[] args) {
     int[] nums = {1, 0, 2, 0, 3, 0, 4, 0};
-    moveZerosLeft(nums);
+    MoveZerostoLeft zeros = new MoveZerostoLeft();
+    zeros.moveZerosLeft(nums);
+    System.out.println(Arrays.toString(nums));
   }
 
 }
