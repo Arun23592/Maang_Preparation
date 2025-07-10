@@ -14,5 +14,9 @@ public class set {
         sets.add("C#");
 
         System.out.println(sets);
+
+        for(String c: sets){
+            System.out.println(c);
+        }
     }
 }
