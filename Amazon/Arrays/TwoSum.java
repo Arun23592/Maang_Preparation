@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.Arrays;
+package Amazon.Arrays;
 
 import java.util.*;
 
@@ -18,14 +18,14 @@ public class TwoSum {
             
     }
 
-    return nums;
+    return new int[0];
 
   }
   
 
   public static void main(String[] args) {
-    int[] nums = {6, 8, 11, 6, 7, 18};
-    int target = 17;
+    int[] nums = {6, 8, 11, 6, 7, 18, 2};
+    int target = 20;
     TwoSum sum = new TwoSum();
     int[] twoSum = sum.findTwoSum(nums, target);
     if (twoSum.length == 0) {
