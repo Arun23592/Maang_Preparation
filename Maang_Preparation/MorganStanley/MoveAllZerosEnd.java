@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class MoveAllZerosEnd {
 
-  public void moveZeros(int[] n){
+  public static int[] moveZeros(int[] n){
     
      int position = 0;
 
@@ -16,6 +16,7 @@ class MoveAllZerosEnd {
         position++;
       }
      }
+     return n;
     }      
     //  // Fill the remaining positions with zeros
     //  while (position < n.length) {
@@ -31,9 +32,11 @@ class MoveAllZerosEnd {
 
   public static void main(String[] args) {
     int[] n = {1, 0, 2, 0, 3, 0, 4};
-    MoveAllZerosEnd zeros = new MoveAllZerosEnd();
-    zeros.moveZeros(n);
-    System.out.println(Arrays.toString(n));
+    moveZeros(n);
+    for(int num: n){
+      System.out.print("[" + num);
+    }
+    
 
   }
 }
