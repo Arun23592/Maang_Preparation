@@ -1,6 +1,6 @@
 package Nagarro;
 
-import java.util.Arrays;
+
 
 public class MoveEvenLeftOddRight {
 
@@ -41,3 +41,19 @@ public class MoveEvenLeftOddRight {
   }
 
 }
+
+/*
+ * Approach: Use an Auxiliary Array
+Although this approach uses O(n) space, it guarantees stability.
+
+✅ Time Complexity
+O(n) (one pass to segregate, another pass to fill the array)
+
+✅ Space Complexity
+O(n) (for the temporary array)
+
+
+ * 
+ * 
+ * 
+ */
