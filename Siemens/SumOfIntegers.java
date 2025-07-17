@@ -1,7 +1,5 @@
 package Siemens;
 
-import Collections.Set.set;
-
 public class SumOfIntegers {
 
     public static void main(String[] args){
