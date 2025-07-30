@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.String;
+package Amazon.String;
 // import java.util*;
 public class LongestPalindromicSubstring {
   
