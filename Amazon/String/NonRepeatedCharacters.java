@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.String;
+package Amazon.String;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ public class NonRepeatedCharacters {
     for(char c: input.toCharArray()){
       if (countMap.get(c) == 1) {
         return c;
-        
+          
       }
     }
 
