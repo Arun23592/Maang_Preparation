@@ -50,3 +50,8 @@ public class Abstraction {
 //   public void setup() { /* driver setup */ }
 //   public abstract void launchApp();
 // }
+
+/*
+ * Abstract Class: A class that can have both abstract (unimplemented) and concrete (implemented) methods. It can maintain state (instance variables).
+ * 
+ */
