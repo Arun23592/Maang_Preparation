@@ -47,6 +47,13 @@ Page class methods for different variations of the same action.
 click(), click(String locator), click(By locator) in utility/helper classes.
 
 Overloading waitForElement() with different parameters.
+
+public class WaitHelper {
+    public void waitForElement(WebElement element) { ... }
+    public void waitForElement(By locator, int timeout) { ... }
+    public void waitForElement(String xpath) { ... }
+}
+
  * 
  *  
  * 
