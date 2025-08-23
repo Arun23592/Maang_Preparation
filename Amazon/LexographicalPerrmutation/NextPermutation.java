@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.LexographicalPerrmutation;
+package Amazon.LexographicalPerrmutation;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ public class NextPermutation {
       return;
     }
 
-    //1.ind the right most eleemnt
+    //1.Find the right most eleemnt
     int i = nums.length - 2;
     while (i >= 0 && nums[i] >= nums[i + 1]) {
       i--;
@@ -24,6 +24,7 @@ public class NextPermutation {
       swap(nums, i, j );
     }
 
+    // Step 3: Reverse the suffix
     reverse(nums, i+1, nums.length-1);
   }
 
