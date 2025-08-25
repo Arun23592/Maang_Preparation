@@ -17,3 +17,24 @@ public class NumberSeriesPattern {
   }
 
 }
+
+/*
+ * 
+ * Time Complexity
+O(n²): Due to nested looping.
+
+Space Complexity
+O(1): No extra data structures, outputs directly.
+
+Edge Cases
+n = 0 ⇒ Nothing should print.
+
+n < 0 ⇒ Should handle gracefully (no output or validation).
+
+Interview Follow-ups
+How to print the pattern as a single string?
+
+Modify pattern for different input requirements.
+ * 
+ * 
+ */
