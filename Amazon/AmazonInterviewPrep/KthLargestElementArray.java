@@ -20,7 +20,7 @@ public class KthLargestElementArray {
     //1. priorityQueue --> min- heap
     PriorityQueue<Integer> minHeap = new PriorityQueue<>();
     //2. Iterate throw elements and find the kth element
-    for(int num: nums){
+    for(int num: nums){ 
         if(minHeap.size() < k || num > minHeap.peek()){
           minHeap.add(num);
         }
