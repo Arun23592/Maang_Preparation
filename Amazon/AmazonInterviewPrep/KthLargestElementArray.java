@@ -77,4 +77,19 @@ Graceful error handling in main.
  * 
  * 
  * 
+ * ✅ Test Cases for largestElement(int[] nums, int k)
+Test ID	  Input (nums, k)	    Expected Output	      Notes
+TC_01	  [3,2,3,1,2,4,5,5,6],    k=2	    5	          Normal case (second largest element).
+TC_02	  [1], k=1	              1	                  Edge case: Single element array.
+TC_03	  [2,2,2], k=2	          2	                  All elements same.
+TC_04	[7,10,4,3,20,15], k=3	    10	                k=3rd largest.
+TC_05	[1,2], k=2	              1	                  Small array, valid k.
+TC_06	[5,6,7], k=5	          Error/Exception	      Invalid input: k > array length.
+TC_07	[], k=1	                Error/Exception	      Invalid input: Empty array.
+TC_08	[Integer.MIN_VALUE, 
+      Integer.MAX_VALUE, 0], k=1	2147483647	      Extreme values.
+TC_09	[3,1,4,1,5,9], k=6	        1	                Valid but k = array length.
+TC_10	[3,2,3,1,2,4,5,5,6], k=0	  Error/Exception	  Invalid input: k=0.
+ * 
+ * 
  */
