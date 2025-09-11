@@ -43,7 +43,7 @@ public class FirstNonRepeatedCharacterInString {
     List<Character> results = firstNonRepeatedCharacter(input);
 
     if (!results.isEmpty()) {
-      System.out.println("All Non-Repeated character is: "+results);
+      System.out.println("All Non-Repeated character is: "+results.get(1));
     }else{
       System.out.println("Non-Repeated characters not found: ");
     }
