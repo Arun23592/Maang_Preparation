@@ -87,7 +87,7 @@ public class MatrixInSpiralFormat {
  * 
  * Write code to print a 2×2 matrix in a spiral format.
  * 
- * 
+ * Approach: Boundary Traversal using four pointers which is optimal.
  * 
  * ✅ Complexity
 
