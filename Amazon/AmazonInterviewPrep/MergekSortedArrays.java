@@ -58,6 +58,8 @@ public class MergekSortedArrays {
 
 
 /*
+	11. Given K sorted arrays ‘arr’, of size N each, merge them into a new sorted array
+‘res.
  * Merge two sorted arrays:
  * 1.   MergeTwoArrays maintain with two pointer i, j 
  * 2.  collect merged number in ArrayList
