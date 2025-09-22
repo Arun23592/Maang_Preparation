@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.Arrays;
+package Amazon.Arrays;
 
 import java.util.*;
 
