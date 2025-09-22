@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.Arrays;
+package Amazon.Arrays;
 
 // import java.util.Collection;
 // import java.util.Collections;
@@ -8,6 +8,17 @@ import java.util.PriorityQueue;
 public class LargestElementInArrayK {
 
     public int largestElement(int[] nums, int k){
+      //Edge case:1 null or empty array
+      if (nums == null || nums.length == 0) {
+          throw new IllegalArgumentException("Input array is empty or null");
+      }
+
+      //Edge case 2: k out of range
+      if(k <= 0 || k > nums.length){
+        throw new IllegalArgumentException("k must be betweek 1 and length of the array");
+      }
+
+
       PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
       for(int i = 0; i< nums.length; i++){
@@ -28,7 +39,7 @@ public class LargestElementInArrayK {
 
     public static void main(String[] args){
       int[] nums = {3,2,3,1,2,4,5,5,6};
-      int k = 2;
+      int k = -1;
       LargestElementInArrayK obj = new LargestElementInArrayK();
       int sElement = obj.largestElement(nums, k);
       System.out.println("Second largest element is: "+sElement);
