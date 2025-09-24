@@ -1,35 +1,35 @@
-package Maang_Preparation.Amazon.Arrays;
+package Amazon.Arrays;
 
 import java.util.Arrays;
 
-public class MergeSortedArray {
+  public class MergeSortedArray {
 
-  public void merge(int[] nums1, int m, int[] nums2, int n){
-    int i = m - 1;
-    int j = n - 1;
-    int k = m + n - 1;
+    public void merge(int[] nums1, int m, int[] nums2, int n){
+      int i = m - 1;
+      int j = n - 1;
+      int k = m + n - 1;
 
-    while(j >= 0){
-      if(i >= 0 && nums1[i] > nums2[j]){
-        nums1[k--] = nums1[i--];
-      }else{
-        nums1[k--] = nums2[j--];
+      while(j >= 0){
+        if(i >= 0 && nums1[i] > nums2[j]){
+          nums1[k--] = nums1[i--];
+        }else{
+          nums1[k--] = nums2[j--];
+        }
       }
     }
+
+    public static void main(String[] args){
+      int[] nums1 = {1, 3, 5, 7, 8, 9, 0, 0, 0};
+      int m = 6;
+      int[] nums2 = {2, 4, 6};
+      int n = 3;
+      MergeSortedArray mergeSortedArray = new MergeSortedArray();
+      mergeSortedArray.merge(nums1, m, nums2, n);
+
+      System.out.println("Merge sorted array: "+ Arrays.toString(nums1));
+    }
+
   }
-
-  public static void main(String[] args){
-    int[] nums1 = {1, 3, 5, 0, 0, 0};
-    int m = 5;
-    int[] nums2 = {2, 4, 6};
-    int n = 3;
-    MergeSortedArray mergeSortedArray = new MergeSortedArray();
-    mergeSortedArray.merge(nums1, m, nums2, n);
-
-    System.out.println("Merge sorted array: "+ Arrays.toString(nums1));
-  }
-
-}
 
 
 /*
