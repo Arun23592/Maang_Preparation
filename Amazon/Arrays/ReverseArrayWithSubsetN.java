@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.Arrays;
+package Amazon.Arrays;
 
 import java.util.Arrays;
 
@@ -22,8 +22,8 @@ public class ReverseArrayWithSubsetN {
   }
 
   public static void main(String[] args){
-    int[] array = {1, 3, 5, 7, 9, 11, 15, 17, 19};
-    int n = 3;
+    int[] array = {1, 3, 5, 7, 9, 11, 15, 17, 19, 20, 21, 22};
+    int n = 4;
     reverseInSubset(array, n);
     System.out.println("Reversed array subset of N: "+ Arrays.toString(array));
   }
