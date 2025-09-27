@@ -31,7 +31,7 @@ public class BuyandSellStock_BruteForce {
   public static void main(String[] args) {
     int[] prices = {100,180,260,310,40,535,695};
     int[] result = buyandsellStock(prices);
-    System.out.println( result[0]+ " is buying date "+" and the price is "+prices[result[0]]+ ", " +result[1] + " is selling date"+ " and price is:  "+prices[result[1]]);
+    System.out.println(result[0]+ " is buying date "+" and the price is "+prices[result[0]]+ ", " +result[1] + " is selling date"+ " and price is:  "+prices[result[1]]);
   }
 
 }
@@ -74,7 +74,9 @@ public class BuyandSellStock_BruteForce {
  * 2. How does the brute force approach help in understanding the problem before optimizing it?
  * 
  * 
- * Answer: 
+ * Time Complexity = O(n)
+
+Space Complexity = O(1)
  * 
  * 
  * 
