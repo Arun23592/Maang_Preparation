@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.Math;
+package Amazon.Math;
 
 public class PalindromeNumber {
 
