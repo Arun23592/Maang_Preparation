@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.String;
+package Amazon.String;
 
 public class ReverseString {
 
@@ -18,7 +18,7 @@ public class ReverseString {
 
 
   public static void main(String[] args) {
-    String s = "H,a,n,n,a,h";
+    String s = "YOU CANT SEE ME";
     char[] chars = s.toCharArray();
     ReverseString rev = new ReverseString();
 
