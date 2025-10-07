@@ -131,6 +131,10 @@ In-place swap & reverse → O(1) (excluding input/output).
 Single char: "a" → "a"
 
 
+Type: Lexicographic Scan (Pivot → Successor → Reverse)
+Time: O(n)
+Space: O(1)
+
  * 
  * 
  */
