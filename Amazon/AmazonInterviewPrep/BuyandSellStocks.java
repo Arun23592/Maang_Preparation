@@ -34,3 +34,19 @@ public class BuyandSellStocks {
 
 
 }
+
+
+/*
+ * 
+ * 
+ * .
+
+👉 From interview perspective:
+
+First explain the brute force (try all 2 transactions → O(n²) or worse).
+
+Then optimize using prefix-suffix arrays (O(n)).
+
+Finally, mention the Kadane-based O(1) DP solution (most efficient).
+ * 
+ */
