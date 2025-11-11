@@ -23,7 +23,6 @@ public class Hashmap {
 
     //Remove an entry
     map.remove(101);
-
     System.out.println("After removal: "+ map);
     
   }
