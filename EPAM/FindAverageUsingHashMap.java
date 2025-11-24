@@ -34,7 +34,7 @@ public class FindAverageUsingHashMap {
       Lee – 22
       Cathe – 45
 Using key and value and find the average?
- * 
+ 
  * 
  * 
  */
