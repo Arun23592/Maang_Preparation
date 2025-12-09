@@ -23,7 +23,7 @@ public class CheckPalindromeInteger {
   }
 
   public static void main(String[] args) {
-    int num = 122;
+    int num = 121;
     
     System.out.println(num +" is a Palindrome "+isPalindromeNumber(num));
     System.out.println(num +" is not a Palindrome "+isPalindromeNumber(num));
