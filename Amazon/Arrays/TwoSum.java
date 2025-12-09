@@ -25,7 +25,7 @@ public class TwoSum {
 
   public static void main(String[] args) {
     int[] nums = {6, 8, 11, 6, 7, 18, 2};
-    int target = 20;
+    int target = 17;
     TwoSum sum = new TwoSum();
     int[] twoSum = sum.findTwoSum(nums, target);
     if (twoSum.length == 0) {
