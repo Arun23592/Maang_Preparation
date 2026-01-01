@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.DP;
+package Amazon.DP;
 
 public class LongestIncreasingSubsequence {
 
