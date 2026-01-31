@@ -15,7 +15,7 @@ public class ExpandString {
 
     while (i+1 < length && Character.isDigit(str.charAt(i+1))) {
       count = count * 10 + (str.charAt(++i) - '0');   //collect digits after the character
-      
+        
     }
 
     
@@ -32,7 +32,7 @@ public class ExpandString {
 
 
   public static void main(String[] args) {
-    String str = "a12b3c4";
+    String str = "a2b3c4";
 
     String result = stringExpansion(str);
     System.out.println(result);
