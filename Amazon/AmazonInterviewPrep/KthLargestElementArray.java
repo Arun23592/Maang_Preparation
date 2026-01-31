@@ -1,6 +1,8 @@
 package Amazon.AmazonInterviewPrep;
 
+import java.util.HashSet;
 import java.util.PriorityQueue;
+import java.util.Set;
 
 public class KthLargestElementArray {
 
@@ -17,10 +19,15 @@ public class KthLargestElementArray {
       throw new IllegalArgumentException("k must be between 1 and length of the array");
     }
 
+    Set<Integer> unique = new HashSet<>();
+    for(int n: nums){
+      unique.add(n);
+    }
+
     //1. priorityQueue --> min- heap
     PriorityQueue<Integer> minHeap = new PriorityQueue<>();
     //2. Iterate throw elements and find the kth element
-    for(int num: nums){ 
+    for(int num: unique){ 
         if(minHeap.size() < k || num > minHeap.peek()){
           minHeap.add(num);
         }
@@ -36,8 +43,8 @@ public class KthLargestElementArray {
   }
 
   public static void main(String[] args) {
-    int[] nums = {10, 20, -3, 40, 40, 4, 80, 100};
-    int k = 5;
+    int[] nums = {10, 20, -3, 40, 40, 4, 80, 100, 100, 80};
+    int k = 2;
 
     int results = largestElementK(nums, k);
     System.out.println("Kth Largest element: "+results);
