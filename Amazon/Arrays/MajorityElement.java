@@ -1,6 +1,7 @@
 package Amazon.Arrays;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class MajorityElement {
@@ -8,7 +9,7 @@ public class MajorityElement {
 
     public int majorityElements(int[] nums){
 
-        HashMap<Integer, Integer> countMap = new HashMap<>();
+        Map<Integer, Integer> countMap = new HashMap<>();
 
         int n = nums.length;
 
