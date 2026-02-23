@@ -1,4 +1,4 @@
-package Maang_Preparation.Walmart;
+package Walmart;
 
 
 
