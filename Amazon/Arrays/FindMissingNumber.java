@@ -21,3 +21,16 @@ public class FindMissingNumber {
     System.out.println(totalSum);
   }
 }
+
+
+/***
+ * 
+ * Approach implemented: Sum-based approach
+ * 
+ * Complexity:
+    Time: O(n)
+    Space: O(1)
+
+    Explanation:
+    I used the sum formula for numbers from 0 to n. First I calculated the expected sum, then I subtracted the actual array sum. The difference gives the missing number.”
+ */
