@@ -35,7 +35,7 @@ public class Q2_MinStoragecost {
       //size of your current range
       int size = right - left + 1;
 
-      //if there are no sensitive file, use faltcost
+      //if there are no sensitive file, use flatcost
       if(sensitiveCount == 0){
         return flatCost;
       }
@@ -245,5 +245,6 @@ public class MinStorageCostPractice {
         return Math.min(costWithoutSplit, leftCost + rightCost);
     }
 }
+
  * 
  */
