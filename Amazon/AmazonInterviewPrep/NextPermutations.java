@@ -8,7 +8,7 @@ public class NextPermutations {
     int n = nums.length;
     int i = n - 2;
 
-    //step 1: Find the first decreasing element from the end
+    //step 1: Find the first decreasing element from the right
     while (i >= 0 && nums[i] >= nums[i+1]) {
       i--;
       
@@ -27,12 +27,14 @@ public class NextPermutations {
       reverse(nums, i+1, n-1);
   }
 
+  //helper method for swap
   private static void swap(int[] nums, int i, int j){
     int temp = nums[i];
     nums[i] = nums[j];
     nums[j] = temp;
   }
 
+  //helper method for reverse
   private static void reverse(int[] nums, int start, int end){
     while (start < end) {
       swap(nums, start++, end--);
