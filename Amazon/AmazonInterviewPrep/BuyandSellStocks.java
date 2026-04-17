@@ -48,5 +48,16 @@ First explain the brute force (try all 2 transactions → O(n²) or worse).
 Then optimize using prefix-suffix arrays (O(n)).
 
 Finally, mention the Kadane-based O(1) DP solution (most efficient).
+
+Question
+	Given the daily prices of a stock, what’s the maximum possible profit one can
+	generate by first buying one share of that stock on a certain day and then selling
+	that share at least one day later?  -  Brute Force algorithm (AMAZON)
+
+  Interview explanation:
+
+“Brute force checks every possible buy and sell combination. For each day, I assume it is the buy day and compare it with every future day as the sell day.
+ I calculate profit for each pair and store the maximum profit seen so far. This approach is simple but inefficient because it uses nested loops and takes O(n²) time.”
+
  * 
  */
