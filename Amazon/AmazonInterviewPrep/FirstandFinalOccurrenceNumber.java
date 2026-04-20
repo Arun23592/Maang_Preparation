@@ -62,7 +62,7 @@ public class FirstandFinalOccurrenceNumber {
 
     while (left <= right) {
       // corrected mid calculation to avoid overflow and wrong index
-      int mid = right + (left - right)/2;
+      int mid = right + (left - right);
 
       if(nums[mid] == target){
         // we found target, but there may be a later one on the right side
@@ -97,15 +97,17 @@ public class FirstandFinalOccurrenceNumber {
 
       return result;
   }
-    public static void main(String[] args){
-      int[] nums = {1, 3, 4, 5, 5, 8};
-    int target = 5;
 
+  public static void main(String[] args) {
+    int[] nums = {1, 3, 4, 5, 5, 8};
+    int target = 5;
     int[] results = firstandFinalOcurrence(nums, target);
-    System.out.println(results[0]);
-    System.out.println(results[1]);
-    }
+    System.out.println(results[0]); // 3
+    System.out.println(results[1]); // 4
+   
   }
+}
+// ✅ FIXED — class closing bracket added
 /*
  * 
  * Approach:
