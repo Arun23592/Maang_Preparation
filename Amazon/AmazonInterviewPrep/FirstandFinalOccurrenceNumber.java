@@ -35,7 +35,6 @@ public class FirstandFinalOccurrenceNumber {
       }else{
         // nums[mid] > target -> target must be on the left side
         right = mid - 1;
-      }
     }
 
     return firstOccurrence;
@@ -63,7 +62,7 @@ public class FirstandFinalOccurrenceNumber {
 
     while (left <= right) {
       // corrected mid calculation to avoid overflow and wrong index
-      int mid = right + (left - right);
+      int mid = right + (left - right)/2;
 
       if(nums[mid] == target){
         // we found target, but there may be a later one on the right side
@@ -97,22 +96,16 @@ public class FirstandFinalOccurrenceNumber {
       result[1] = lastOccurrence(nums, target);
 
       return result;
-  
   }
-
-  public static void main(String[] args) {
-    int[] nums = {1, 3, 4, 5, 5, 8};
+    public static void main(String[] args){
+      int[] nums = {1, 3, 4, 5, 5, 8};
     int target = 5;
 
     int[] results = firstandFinalOcurrence(nums, target);
     System.out.println(results[0]);
     System.out.println(results[1]);
+    }
   }
-}
-  
-
-
-
 /*
  * 
  * Approach:
