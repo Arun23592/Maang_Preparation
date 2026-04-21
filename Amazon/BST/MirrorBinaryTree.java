@@ -1,4 +1,4 @@
-package Maang_Preparation.Amazon.BST;
+package Amazon.BST;
 
 import java.util.LinkedList;
 import java.util.Queue;
