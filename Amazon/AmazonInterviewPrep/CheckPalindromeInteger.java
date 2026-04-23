@@ -55,7 +55,7 @@ Time Complexity: O(log10(n)) → because we process each digit once.
 Space Complexity: O(1) → only a few variables.
 
 
-⚠️ Edge Cases
+⚠️ Edge Cases:
 
 Negative numbers → not palindrome.
 
