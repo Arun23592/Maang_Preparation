@@ -97,7 +97,6 @@ Copy & sort:
 Copy nums2 into the vacant tail of nums1, then Arrays.sort(nums1).
 Simple but slower: O((m+n) log(m+n)), still in place.
 
-
  * 
  * 
  * 
