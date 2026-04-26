@@ -25,7 +25,7 @@ public class MoveAllZerosToEnd {
     int[] nums = {1, 0, 2, 0, 3, 0};
 
     MoveAllZerosToEnd move = new MoveAllZerosToEnd();
-    move.moveZerosToEnd(nums);
+    MoveAllZerosToEnd.moveZerosToEnd(nums);
     System.out.println(Arrays.toString(nums));
   }
 
