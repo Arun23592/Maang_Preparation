@@ -134,7 +134,6 @@ public class FirstandFinalOccurrenceNumber {
 * - If the target is not found, methods return -1.
 
 
-
 "This code uses a modified binary search approach to find the first and last occurrence of a number in a sorted array. It performs binary search twice: one biased to the left to find the first occurrence, and one biased to the right to find the last occurrence. The complexity is O(log n) time and O(1) space, which is optimal for sorted arrays. A minor bug is in the calculation of mid in findLast(), which should use left + (right - left)/2 to avoid overflow and incorrect values."
 
 ✅ Alternative Approach
