@@ -26,7 +26,7 @@ public class CheckLinkedListPalindrome {
 
      //3. compare first half and second half
      ListNode firstHalf = head;
-     ListNode copySecondHalf = secondHalf;
+    //  ListNode copySecondHalf = secondHalf;
 
      while (secondHalf != null) {
       if (firstHalf.val != secondHalf.val) return false;
