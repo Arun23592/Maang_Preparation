@@ -8,6 +8,7 @@ public class MoveAllZerosToEnd {
   public static int[] moveZerosToEnd(int[] nums){
 
     int position = 0;
+    
 
     for(int i=0; i<nums.length; i++){
       if(nums[i] != 0){
