@@ -147,6 +147,7 @@ Scan array right to left for last occurrence.
 Time Complexity: O(n).
 
 Simple but not optimal for large arrays.
+
 */
  * 
  * 
