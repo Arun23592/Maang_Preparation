@@ -67,5 +67,6 @@ Otherwise, the duplicate number must be in the range [mid + 1, right]. Therefore
 Finding the Duplicate:
 
 The duplicate number will be found when left is equal to right. The variable duplicate keeps track of the midpoint that caused the count to be greater than mid, which is the duplicate number.
+ß
  * 
  */
