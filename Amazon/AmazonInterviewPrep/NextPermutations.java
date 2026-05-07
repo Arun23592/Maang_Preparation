@@ -50,3 +50,11 @@ public class NextPermutations {
   }
 
 }
+
+
+/***
+ * 
+ * 
+ * 	Given a sequence, return its next lexicographically greater permutation. If such a
+permutation does not exist, then return it in ascending order (ie, the lowest possible order).
+ */
