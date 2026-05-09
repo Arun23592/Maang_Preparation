@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
+import java.util.*;
 public class NonEmptySubarrayWithSumZero_Hashmap {
 
   public static List<List<Integer>> nonEmptySubArray(int[] arr){
@@ -24,15 +24,14 @@ public class NonEmptySubarrayWithSumZero_Hashmap {
 
       //Case 1: prefix sum is 0
       if(sum == 0){
-        result.add(Arrays.stream(Arrays.copyOfRange(arr, 0, i+1)).boxed().toList());
-        
+        result.add(new ArrayList<>(Arrays.asList(Arrays.stream(Arrays.copyOfRange(arr, 0, i+1)).boxed().toArray(Integer[]::new))));
 
       }
 
       //Case 2: prefix sum seen before
       if(prefixMap.containsKey(sum)){
         for(int start: prefixMap.get(sum)){
-          result.add(Arrays.asList(Arrays.copyOfRange(arr, start+1, i+1)));
+          result.add(new ArrayList<>(Arrays.asList(Arrays.stream(Arrays.copyOfRange(arr, start+1, i+1)).boxed().toArray(Integer[]::new))));
         }
       }
 
@@ -50,11 +49,8 @@ public class NonEmptySubarrayWithSumZero_Hashmap {
   public static void main(String[] args) {
     int[] arr = {3, 4, -7, 1, 2, -6};
 
-    if (nonEmptySubArray(arr)) {
-      System.out.println("Zero-sum subarray exists");
-    }else{
-      System.out.println("No Zero-sum subarray");
-    }
+   List<List<Integer>> subarrays = nonEmptySubArray(arr);
+   System.out.println("Zero-sum subarrays: " + subarrays);
   }
 
 }
