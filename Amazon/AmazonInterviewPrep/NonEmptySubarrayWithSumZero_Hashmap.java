@@ -3,11 +3,7 @@ package Amazon.AmazonInterviewPrep;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.*;
+
 public class NonEmptySubarrayWithSumZero_Hashmap {
 
   public static List<List<Integer>> nonEmptySubArray(int[] arr){
@@ -24,14 +20,14 @@ public class NonEmptySubarrayWithSumZero_Hashmap {
 
       //Case 1: prefix sum is 0
       if(sum == 0){
-        result.add(new ArrayList<>(Arrays.asList(Arrays.stream(Arrays.copyOfRange(arr, 0, i+1)).boxed().toArray(Integer[]::new))));
+        result.add(Arrays.stream(arr, 0, i+1).boxed().toList());
 
       }
 
       //Case 2: prefix sum seen before
       if(prefixMap.containsKey(sum)){
         for(int start: prefixMap.get(sum)){
-          result.add(new ArrayList<>(Arrays.asList(Arrays.stream(Arrays.copyOfRange(arr, start+1, i+1)).boxed().toArray(Integer[]::new))));
+          result.add(Arrays.stream(arr, start+1, i+1).boxed().toList());
         }
       }
 
