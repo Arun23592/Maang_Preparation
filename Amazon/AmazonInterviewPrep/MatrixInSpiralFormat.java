@@ -65,9 +65,9 @@ public class MatrixInSpiralFormat {
 
 
   public static void main(String[] args) {
-    int[][] matrix = {{1, 2, 3},
-                      {4, 5, 6},
-                      {7, 8, 9}};
+      int[][] matrix = {{1, 2, 3},
+                        {4, 5, 6},
+                        {7, 8, 9}};
 
         List<Integer> results = spiralMatrix(matrix);
         System.out.println("2X2 spiral matrix are: "+results);
@@ -86,8 +86,8 @@ public class MatrixInSpiralFormat {
  * 
  * 
  * Write code to print a 2×2 matrix in a spiral format.
- * 
- * Approach: Boundary Traversal using four pointers which is optimal.
+ * Boundary Traversal using four pointers which is optimal.
+ * Approach: 
  * 
  * ✅ Complexity
 
