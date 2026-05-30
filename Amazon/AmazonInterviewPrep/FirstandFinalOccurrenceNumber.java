@@ -4,109 +4,103 @@ package Amazon.AmazonInterviewPrep;
 public class FirstandFinalOccurrenceNumber {
 
   /**
-* Return an array of two integers: {firstIndex, lastIndex}
-* If target not present, both entries are -1.
-*/
+   * Return an array of two integers: {firstIndex, lastIndex}
+   * If target not present, both entries are -1.
+   */
 
+  /**
+   * findFirst - finds the leftmost (first) index of target
+   * Approach:
+   * - Standard binary search loop.
+   * - When nums[mid] == target, record mid as candidate and continue searching left
+   *   by setting right = mid - 1. This ensures we find the earliest index.
+   */
+  private static int firstOccurrence(int[] nums, int target) {
+      int left = 0, right = nums.length - 1;
+      int firstOccurrence = -1;
 
-/**
-* findFirst - finds the leftmost (first) index of target
-* Approach:
-* - Standard binary search loop.
-* - When nums[mid] == target, record mid as candidate and continue searching left
-* by setting right = mid - 1. This ensures we find the earliest index.
-*/
-//1. first occurrence
-  private static int firstOccurrence(int[] nums, int target){
-    int left = 0, right = nums.length - 1;
-    int firstOccurrence = -1;
+      while (left <= right) {
+          // safe mid calculation to avoid overflow
+          int mid = left + (right - left) / 2;
 
-    while (left <= right) {
-      // safe mid calculation to avoid overflow
-      int mid = left + (right - left) / 2;
-
-      if (nums[mid] == target) {
-        // we found target, but there may be an earlier one on the left side
-         firstOccurrence = mid; // record current match
-         right = mid - 1; // search left half to find earlier occurrence
-      }else if (nums[mid] < target) {
-        // target must be on the right side
-        left = mid + 1;
-      }else{
-        // nums[mid] > target -> target must be on the left side
-        right = mid - 1;
-    }
-
-    return firstOccurrence;
+          if (nums[mid] == target) {
+              // we found target, but there may be an earlier one on the left side
+              firstOccurrence = mid; // record current match
+              right = mid - 1;       // search left half to find earlier occurrence
+          } else if (nums[mid] < target) {
+              // target must be on the right side
+              left = mid + 1;
+          } else {
+              // nums[mid] > target -> target must be on the left side
+              right = mid - 1;
+          }
+      }
+      return firstOccurrence; 
   }
 
+  /**
+   * findLast - finds the rightmost (last) index of target
+   * Approach:
+   * - Same as findFirst but when a match is found we move left = mid + 1
+   *   to search the right half for a later occurrence.
+   *
+   * Note: The original code had a bug in mid calculation:
+   * int mid = right + (left - right) / 2; // WRONG
+   * It should be: left + (right - left) / 2
+   */
+  private static int lastOccurrence(int[] nums, int target) {
+      int left = 0, right = nums.length - 1;
+      int lastOccurrence = -1;
 
-/**
-* findLast - finds the rightmost (last) index of target
-* Approach:
-* - Same as findFirst but when a match is found we move left = mid + 1
-* to search the right half for a later occurrence.
-*
-* Note: The original code had a bug in mid calculation:
-* int mid = right + (left - right) / 2; // WRONG
-* It should be: left + (right - left) / 2
-*/
+      while (left <= right) {
+          // corrected mid calculation to avoid overflow
+          int mid = left + (right - left) / 2;
 
-
-//2. last occurrence
-
-  private static int lastOccurrence(int[] nums, int target){
-    int left = 0, right = nums.length - 1;
-
-    int lastOccurence = -1;
-
-    while (left <= right) {
-      // corrected mid calculation to avoid overflow and wrong index
-      int mid = right + (left - right);
-
-      if(nums[mid] == target){
-        // we found target, but there may be a later one on the right side
-        lastOccurence = mid; // record current match
-        left = mid + 1; // search right half to find later occurrence
-      }else if (nums[mid] < target) {
-        // target is on the right side
-        left = mid + 1;
-      }else{
-        // target is on the left side
-        right = mid - 1; 
+          if (nums[mid] == target) {
+              // we found target, but there may be a later one on the right side
+              lastOccurrence = mid; // record current match
+              left = mid + 1;       // search right half to find later occurrence
+          } else if (nums[mid] < target) {
+              // target is on the right side
+              left = mid + 1;
+          } else {
+              // target is on the left side
+              right = mid - 1; 
+          }
       }
-    }
+      return lastOccurrence;
+  }
 
-    return lastOccurence;
-  } 
-
-  //3. both first and last occurrence
-
-  public static int[] firstandFinalOcurrence(int[] nums, int target){
+  /**
+   * firstandFinalOccurrence - returns both first and last index of target
+   */
+  public static int[] firstandFinalOcurrence(int[] nums, int target) {
       int[] result = {-1, -1};
 
       // Defensive check: if array is null or empty, return default {-1,-1}
-      if (nums == null || nums.length == 0) {
-          return result;
-      }
-      // Find first occurrence (leftmost index) using modified binary search
+      if (nums == null || nums.length == 0) return result;
+
+      // Find first occurrence (leftmost index)
       result[0] = firstOccurrence(nums, target);
 
-      // Find last occurrence (rightmost index) using modified binary search
+      // Find last occurrence (rightmost index)
       result[1] = lastOccurrence(nums, target);
 
       return result;
   }
 
   public static void main(String[] args) {
-    int[] nums = {1, 3, 4, 5, 5, 8};
-    int target = 5;
-    int[] results = firstandFinalOcurrence(nums, target);
-    System.out.println(results[0]); // 3
-    System.out.println(results[1]); // 4
-   
+      int[] nums = {1, 3, 4, 5, 5, 8};
+      int target = 5;
+      int[] results = firstandFinalOcurrence(nums, target);
+      System.out.println(results[0]); // 3
+      System.out.println(results[1]); // 4
   }
 }
+
+
+    
+
 // ✅ FIXED — class closing bracket added
 /*
  * 
