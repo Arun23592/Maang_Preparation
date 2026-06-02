@@ -3,6 +3,8 @@ package Amazon.AmazonInterviewPrep;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class NonEmptySubarrayWithSumZero_Hashmap {
 
@@ -59,11 +61,14 @@ public class NonEmptySubarrayWithSumZero_Hashmap {
  * 👉 Problem Statement:
 Given an array of integers, check if there exists a non-empty subarray whose sum = 0, and return one such subarray if possible.
 
-Approach (Optimal using Prefix Sum + HashSet)
+### We’re asked to find all non‑empty subarrays whose sum is zero. A brute force approach would check every possible subarray in O(n²) time, but we can do better using prefix sums.” ###
+
+
+Approach (Optimal using Prefix Sum + HashMap)
 
 Maintain a prefix sum as we iterate.
 
-Store prefix sums in a HashSet.
+Store prefix sums in a HashMap.
 
 If prefix sum is repeated OR prefix sum = 0 at any point → subarray with sum 0 exists.
 
@@ -73,6 +78,12 @@ Complexity
 Time: O(n) → single pass with prefix sum.
 
 Space: O(n) → HashSet stores prefix sums.
+
+
+"This solution leverages prefix sums and a HashMap to detect and return all zero‑sum subarrays. 
+It’s optimal compared to brute force because it avoids recomputing sums, and 
+it demonstrates how prefix sums can be generalized to any target sum problem. 
+The key insight is that repeating prefix sums imply a zero‑sum subarray between those indices."
 
 
 
