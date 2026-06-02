@@ -52,7 +52,7 @@ nums2 of size n (all valid).
 Goal: Merge nums2 into nums1 in sorted order, in place, using the vacant slots at the end of nums1.
 
 
-✅ Approach (three pointers from the end)
+✅ Approach (three pointers from the end - backward merge approach)
 
 If you merge from the front, you risk overwriting elements in nums1 that you still need to compare.
 So we merge from the back:
