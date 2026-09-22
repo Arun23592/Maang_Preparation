@@ -26,3 +26,20 @@ public class FindTriplets {
   }
   
 }
+
+
+/***
+ * Approach: Brute Force
+ * Alternate Approach: Two Pointers
+ * Explanation: The brute force approach checks all combinations of triplets in the array to see if they sum to the target value. 
+ * The time complexity is O(n^3) due to the three nested loops. 
+ * An alternate approach using two pointers can reduce the time complexity to O(n^2) by first sorting the array and then using two pointers to find pairs that sum to the target minus the current element.
+ * 
+ * How do you optimize this code?
+ * Answer: To optimize the code, we can sort the array and use a two-pointer technique.
+ *  This reduces the time complexity from O(n^3) to O(n^2). 
+ * After sorting, we can fix one element and use two pointers to find pairs that sum to the target minus the fixed element. 
+ * This way, we avoid checking all combinations and can efficiently find triplets.
+ * 
+ * 
+ */
